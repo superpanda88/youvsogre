@@ -1,0 +1,56 @@
+/*colors:
+almond: #F2D8D8
+forest: #5c8984
+ocean: #545B77
+night: #374259 */
+
+body {
+  background-color: #f2d8d8;
+  color: #374259;
+  font-family: "DotGothic16", sans-serif;
+}
+
+h1 {
+  color: #374259;
+  font-size: 50%vh;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background-color: #5c8984;
+}
+
+.image {
+  height: 70vh;
+  background-color: #5c8984;
+  border-radius: 8px;
+}
+
+.ogre-image {
+  transform: scaleX(-1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.left {
+  background-color: #5c8984;
+  border-style: 3px solid #545b77;
+}
+
+.right {
+  background-color: #5c8984;
+  border-style: 3px solid #545b77;
+}
+
+.btn {
+  font-family: "DotGothic16", sans-serif;
+  letter-spacing: 1;
+  padding: 10px;
+  color: #f2d8d8;
+  background-color: #5c8984;
+  border-radius: 8px;
+  box-shadow: ;
+}
