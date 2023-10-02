@@ -5,8 +5,8 @@
 //buttons
 
 const attackButton = document.querySelector(".player-attack");
-const teaseButton = document.querySelector(".player-tease");
-const snackButton = document.querySelector(".player-snack");
+const insultButton = document.querySelector(".player-insult");
+const muffinButton = document.querySelector(".player-muffin");
 const ogreAttackButton = document.querySelector(".ogre-attack");
 const startButton = document.querySelector(".init");
 const ogreBox = document.querySelector(".ogre-box");
@@ -46,10 +46,10 @@ const init = function () {
   ogreScoreDisplay.textContent = ogreScore;
   playerMessage.textContent = "Click to attack";
   ogreMessage.textContent = "*Minding own business*";
-  snackButton.innerHTML = "Muffin Button";
+  muffinButton.innerHTML = "Muffin Button";
   clicked = 0;
-  snackButton.disabled = false;
-  teaseButton.disabled = false;
+  muffinButton.disabled = false;
+  insultButton.disabled = false;
 };
 
 const enrage = function () {
@@ -94,28 +94,28 @@ const insult = function (arr) {
     playerMessage.innerHTML = arr[index];
     index++;
   } else {
-    teaseButton.disabled = true;
+    insultButton.disabled = true;
   }
 };
 
-teaseButton.addEventListener("click", function () {
+insultButton.addEventListener("click", function () {
   insult(insults);
   enrage();
 });
 
 //muffin button
 
-const disableSnacks = () => (snackButton.disabled = true);
+const disableMuffin = () => (muffinButton.disabled = true);
 
-snackButton.addEventListener("click", function () {
+muffinButton.addEventListener("click", function () {
   if (clicked <= 2) {
     playerScore += 3;
     playerScoreDisplay.textContent = `${playerScore}`;
     clicked++;
-    snackButton.innerHTML = `Eat a Muffin: ${clicked} eaten`;
+    muffinButton.innerHTML = `Eat a Muffin: ${clicked} eaten`;
   } else {
-    disableSnacks();
-    snackButton.innerHTML = "No More Muffins!";
+    disableMuffin();
+    muffinButton.innerHTML = "No More Muffins!";
   }
   return clicked;
 });
